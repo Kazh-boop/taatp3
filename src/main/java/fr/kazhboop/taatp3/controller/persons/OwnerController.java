@@ -1,10 +1,12 @@
-package fr.kazhboop.taatp3.controller;
+package fr.kazhboop.taatp3.controller.persons;
 
 import fr.kazhboop.taatp3.dto.EntityMappers;
 import fr.kazhboop.taatp3.dto.persons.OwnerDto;
-import fr.kazhboop.taatp3.repository.OwnerDao;
+import fr.kazhboop.taatp3.repository.persons.OwnerDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.logging.Logger;
 
 @RestController
 @RequestMapping("/owner")
@@ -35,7 +37,7 @@ public class OwnerController {
         try {
             ownerDto = EntityMappers.INSTANCE.ownerToOwnerDto(ownerDao.findByName(name));
         } catch (Exception ex) {
-            java.util.logging.Logger.getLogger(this.getClass().getName()).warning(ex.toString());
+            Logger.getLogger(this.getClass().getName()).warning(ex.toString());
         }
         return ownerDto;
     }
@@ -47,7 +49,7 @@ public class OwnerController {
         try {
             ownerDtos = EntityMappers.INSTANCE.ownerToOwnerDto(ownerDao.findAll());
         } catch (Exception ex) {
-            java.util.logging.Logger.getLogger(this.getClass().getName()).warning(ex.toString());
+            Logger.getLogger(this.getClass().getName()).warning(ex.toString());
         }
         return ownerDtos;
     }
@@ -64,5 +66,4 @@ public class OwnerController {
         }
         return "Owner successfully updated!";
     }
-
 }
