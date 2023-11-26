@@ -1,10 +1,10 @@
-package fr.kazhboop.taatp3.controller;
+package fr.kazhboop.taatp3.controller.animals;
 
 import fr.kazhboop.taatp3.domain.animals.Animal;
 import fr.kazhboop.taatp3.domain.animals.EAnimalType;
 import fr.kazhboop.taatp3.dto.EntityMappers;
 import fr.kazhboop.taatp3.dto.animals.AnimalDto;
-import fr.kazhboop.taatp3.repository.AnimalDao;
+import fr.kazhboop.taatp3.repository.animals.AnimalDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
