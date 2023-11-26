@@ -3,10 +3,7 @@ package fr.kazhboop.taatp3.domain.animals;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import fr.kazhboop.taatp3.domain.persons.Owner;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
-import jakarta.xml.bind.annotation.XmlElement;
-import jakarta.xml.bind.annotation.XmlRootElement;
-import jakarta.xml.bind.annotation.XmlTransient;
+
 
 import java.io.Serializable;
 
@@ -55,7 +52,6 @@ public class Animal implements Serializable {
     }
 
     @Enumerated(EnumType.STRING)
-    @NotNull
     public EAnimalType getAnimalType() {
         return animalType;
     }
@@ -64,7 +60,6 @@ public class Animal implements Serializable {
         this.animalType = animalType;
     }
 
-    @NotNull
     public String getName() {
         return name;
     }
@@ -73,7 +68,6 @@ public class Animal implements Serializable {
         this.name = name;
     }
 
-    @NotNull
     public int getAge() {
         return age;
     }

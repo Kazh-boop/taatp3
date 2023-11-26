@@ -1,12 +1,12 @@
 package fr.kazhboop.taatp3.repository;
 
-import fr.kazhboop.taatp3.domain.animals.Animal;
+import fr.kazhboop.taatp3.domain.persons.Owner;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface AnimalDao extends JpaRepository<Animal, Long> {
+public interface OwnerDao extends JpaRepository<Owner, Long> {
 
-    Animal findByName(String name);
+        Owner findByName(String name);
 
 }

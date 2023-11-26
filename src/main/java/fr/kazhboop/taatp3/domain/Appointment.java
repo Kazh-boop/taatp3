@@ -4,10 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import fr.kazhboop.taatp3.domain.persons.Owner;
 import fr.kazhboop.taatp3.domain.persons.Veterinarian;
 import jakarta.persistence.*;
-import jakarta.xml.bind.annotation.XmlElement;
-import jakarta.xml.bind.annotation.XmlRootElement;
-import jakarta.xml.bind.annotation.XmlSchemaType;
-import jakarta.xml.bind.annotation.XmlTransient;
+
 
 import java.io.Serializable;
 import java.sql.Timestamp;
@@ -62,7 +59,6 @@ public class Appointment implements Serializable {
     }
 
     @Temporal(TemporalType.TIMESTAMP)
-    @XmlSchemaType(name = "dateTime")
     public Timestamp getStartTime() {
         return startTime;
     }

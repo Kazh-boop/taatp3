@@ -2,8 +2,7 @@ package fr.kazhboop.taatp3.domain.persons;
 
 import fr.kazhboop.taatp3.domain.Appointment;
 import jakarta.persistence.*;
-import jakarta.xml.bind.annotation.XmlElement;
-import jakarta.xml.bind.annotation.XmlRootElement;
+
 
 import java.io.Serializable;
 import java.util.List;
