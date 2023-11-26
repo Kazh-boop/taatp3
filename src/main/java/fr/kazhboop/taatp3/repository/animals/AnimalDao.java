@@ -1,4 +1,4 @@
-package fr.kazhboop.taatp3.repository;
+package fr.kazhboop.taatp3.repository.animals;
 
 import fr.kazhboop.taatp3.domain.animals.Animal;
 import org.springframework.data.jpa.repository.JpaRepository;
